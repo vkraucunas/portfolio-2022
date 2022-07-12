@@ -1,0 +1,55 @@
+$default-grid-columns: 12;
+$default-grid-gutter: 2%;
+$default-grid-display: flex;
+$default-grid-flex-direction: row;
+$default-grid-flex-wrap: wrap;
+$default-grid-justify-content: flex-start;
+$spread-grid-justify-content: space-between;
+
+.containerFluid,
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  max-width: 85%;
+}
+
+.containerFluid {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat($default-grid-columns, 1fr);
+  grid-column-gap: 1.25rem;
+  grid-row-gap: 1.25rem;
+  grid-template-rows: auto;
+  max-width: 85%;
+  margin: 0 auto 2rem;
+
+  @for $i from 1 through $default-grid-columns {
+    > .gridCol#{$i} {
+      grid-column: span $i;
+      align-self: start;
+    }
+  }
+
+  &.even {
+    grid-auto-rows: 1fr;
+
+    @for $i from 1 through $default-grid-columns {
+      > .gridCol#{$i} {
+        grid-column: span $i;
+        align-self: start;
+        height: 100%;
+      }
+    }
+
+    .gridCol12 {
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+$green1: #354a3b;
+$green2: #2c4a11;
+$green3: #2e4142;
+$green4: #2c5031;
+$green5: #125007;
+$green6: #3d4834;
+$text-color: #e5ef5d;
+// media queries
+$mq-xs: only screen and
+  (
+    max-width: 479px,
+  );
+$mq-sm: only screen and
+  (
+    min-width: 480px,
+  );
+$mq-md: only screen and
+  (
+    min-width: 600px,
+  );
+$mq-lg: only screen and
+  (
+    min-width: 840px,
+  );
+$mq-xl: only screen and
+  (
+    min-width: 960px,
+  );
+$mq-xxl: only screen and
+  (
+    min-width: 1280px,
+  );
+
+/// Generate a media query of at least the minimum width from the given breakpoint name.
+/// No query for the smallest breakpoint.
+/// Makes the `@content` apply to the given breakpoint and wider.
+/// @param {String | Number} $name
+/// @param {Map} $breakpoints [$kite-grid-breakpoints] - A map of breakpoints where the key is the name
+
+@mixin breakpoint-up($name, $breakpoints: $kite-grid-breakpoints) {
+  @if type-of($name) == "number" {
+    @media (min-width: $name) {
+      @content;
+    }
+  } @else if map-has-key($breakpoints, $name) {
+    $breakpoint: map-get($breakpoints, $name);
+    $width: map-get($breakpoint, width);
+    @if _kite-breakpoint-is-smallest($name, $breakpoints) {
+      @content;
+    } @else {
+      @media only screen and (min-width: $width) {
+        @content;
+      }
+    }
+  } @else {
+    @error 'Unable to find a breakpoint with name `#{$name}`. Expected one of: (#{map-keys($breakpoints)})';
+  }
+}
