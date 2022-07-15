@@ -34,7 +34,7 @@ header {
   padding: 6rem;
   height: 30vh;
   min-height: 80vh;
-  background-color: rgb(13, 58, 45, 0.3);
+  background-color: rgba(13, 58, 45, 0.4);
 
   .header-contents {
     width: 90%;
