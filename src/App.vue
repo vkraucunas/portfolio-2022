@@ -26,7 +26,7 @@ export default {
 @import "./assets/grid.scss";
 
 body {
-  background-image: url("./assets/clean_textile.png");
+  background-image: url("./assets/ferns.jpg");
   // background-size: cover;
   background-repeat: repeat;
 
