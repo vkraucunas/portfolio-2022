@@ -35,24 +35,3 @@ $mq-xxl: only screen and
 /// No query for the smallest breakpoint.
 /// Makes the `@content` apply to the given breakpoint and wider.
 /// @param {String | Number} $name
-/// @param {Map} $breakpoints [$kite-grid-breakpoints] - A map of breakpoints where the key is the name
-
-@mixin breakpoint-up($name, $breakpoints: $kite-grid-breakpoints) {
-  @if type-of($name) == "number" {
-    @media (min-width: $name) {
-      @content;
-    }
-  } @else if map-has-key($breakpoints, $name) {
-    $breakpoint: map-get($breakpoints, $name);
-    $width: map-get($breakpoint, width);
-    @if _kite-breakpoint-is-smallest($name, $breakpoints) {
-      @content;
-    } @else {
-      @media only screen and (min-width: $width) {
-        @content;
-      }
-    }
-  } @else {
-    @error 'Unable to find a breakpoint with name `#{$name}`. Expected one of: (#{map-keys($breakpoints)})';
-  }
-}
