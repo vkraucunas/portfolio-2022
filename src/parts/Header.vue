@@ -14,7 +14,7 @@
           ><p>linkedi<span>n</span></p></a
         >
       </div>
-      <img src="../../public/me.gif" />
+      <img src="../../public/me2.gif" />
     </div>
   </header>
 </template>
@@ -26,6 +26,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&family=Meow+Script&family=Nothing+You+Could+Do&display=swap");
 @import "../assets/animate.scss";
 
 header {
@@ -52,10 +53,20 @@ header {
       animation: fadeInUp;
       animation-duration: 1.35s;
       animation-delay: 0.25s;
-      font-family: "Meow Script", Helvetica, sans-serif;
+      font-family: "Nothing You Could Do", Helvetica, sans-serif;
+      // font-family: "Meow Script", Helvetica, sans-serif;
       font-size: 4rem;
       font-weight: 400;
+      letter-spacing: -0.6;
       margin-bottom: 5rem;
+      background: -webkit-linear-gradient(
+        0deg,
+        #e6cf3b 0%,
+        rgba(215, 98, 215, 1) 46%,
+        #48e0bf 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .link-row {
