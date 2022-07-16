@@ -14,7 +14,6 @@
           ><p>linkedi<span>n</span></p></a
         >
       </div>
-      <img src="../../public/me2.gif" />
     </div>
   </header>
 </template>
@@ -36,6 +35,7 @@ header {
   height: 30vh;
   min-height: 80vh;
   background-color: rgba(13, 58, 45, 0.4);
+  box-shadow: 4px 1rem 2rem rgba(13, 58, 45, 0.4);
 
   .header-contents {
     width: 90%;
@@ -43,11 +43,6 @@ header {
     text-align: center;
     width: 100%;
     position: relative;
-
-    img {
-      height: auto;
-      max-height: 400px;
-    }
 
     h1 {
       animation: fadeInUp;
