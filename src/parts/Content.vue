@@ -1,6 +1,9 @@
 <template>
   <main id="main">
-    <h2>Hi There!</h2>
+    <div class="flexRow">
+      <h2>Hi There!</h2>
+      <img src="../../public/me2.gif" />
+    </div>
     <p>
       I'm Valerie <a href="#name">Kraucunas</a>, a Senior UX Engineer
       specifically interested in a position on a design system team and other
@@ -175,13 +178,29 @@ main {
   min-height: 60vh;
   flex-grow: 1;
   margin-top: 200px;
-  background-color: #0d3a2d;
+  // background-color: rgba(13, 58, 45, 0.4);
+  background-color: rgba(61, 72, 52, 0.4);
   padding: 4rem;
   box-sizing: border-box;
+
+  p {
+    line-height: 1.8;
+    padding-right: 10%;
+  }
 
   @media screen and (min-width: 600px) {
     width: 80%;
     max-width: 1280px;
+  }
+
+  .flexRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    img {
+      height: auto;
+      max-height: 400px;
+    }
   }
 
   section {
