@@ -2,6 +2,11 @@
   <VKHeader />
   <VKContent />
   <footer>
+    <div class="link-row">
+      <a href="./VK_Resume.pdf" target="_blank">resum<span>e</span></a>
+      <a href="#" target="_blank">githu<span>b</span></a>
+      <a href="#" target="_blank">linkedi<span>n</span></a>
+    </div>
     <p>&copy; {{ new Date().getFullYear() }}, Valerie Kraucunas</p>
   </footer>
 </template>
@@ -20,35 +25,15 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400&family=Fira+Sans:wght@300&family=Meow+Script&display=swap");
 @import "./assets/reset.scss";
 @import "./assets/core.scss";
-@import "./assets/grid.scss";
 
 body {
-  background-image: url("./assets/ferns.jpg");
-  // background-size: cover;
-  background-repeat: repeat;
-
-  a {
-    color: #e9bcb7;
-  }
-}
-
-body,
-#app {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  min-width: 100vw;
-  max-width: 100vw;
-  overflow-x: hidden;
-  font-size: 16px;
-  position: relative;
+  background-image: url("./assets/cacti.jpg");
+  background-size: cover;
 }
 
 #app {
-  font-family: "Fira Sans", Helvetica, sans-serif;
   font-family: "Averia Serif Libre", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -58,5 +43,14 @@ body,
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  footer {
+    width: 100vw;
+    margin-bottom: 2rem;
+
+    .link-row {
+      margin-bottom: 2rem;
+    }
+  }
 }
 </style>

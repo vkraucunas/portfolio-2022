@@ -1,19 +1,10 @@
 <template>
   <header>
-    <div class="header-contents">
-      <h1 class="animate__animated animate__fadeInUp">Valerie Kraucunas</h1>
-      <!-- <h1 class="">Valerie Kraucunas</h1> -->
-      <div class="flex-row link-row animate__animated animate__fadeIn">
-        <a href="./VK_Resume.pdf" target="_blank"
-          ><p>resum<span>e</span></p></a
-        >
-        <a href="#" target="_blank"
-          ><p>githu<span>b</span></p></a
-        >
-        <a href="#" target="_blank"
-          ><p>linkedi<span>n</span></p></a
-        >
-      </div>
+    <h1>Valerie Kraucunas</h1>
+    <div class="link-row">
+      <a href="./VK_Resume.pdf" target="_blank">resum<span>e</span></a>
+      <a href="#" target="_blank">githu<span>b</span></a>
+      <a href="#" target="_blank">linkedi<span>n</span></a>
     </div>
   </header>
 </template>
@@ -25,66 +16,41 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&family=Meow+Script&family=Nothing+You+Could+Do&display=swap");
-@import "../assets/animate.scss";
-
 header {
   width: 100vw;
-  position: relative;
-  padding: 6rem;
-  height: 30vh;
-  min-height: 80vh;
-  background-color: rgba(13, 58, 45, 0.4);
-  box-shadow: 4px 1rem 2rem rgba(13, 58, 45, 0.4);
+  padding: 3rem;
+  margin-bottom: 4rem;
+  background-color: rgba(65, 80, 47, 0.8);
+  // box-shadow: 0px 1px 2rem 2rem rgba(65, 80, 47, 0.8);
 
-  .header-contents {
-    width: 90%;
-    margin: 10rem auto 0;
-    text-align: center;
-    width: 100%;
-    position: relative;
+  h1 {
+    background: -webkit-linear-gradient(0deg, #ef886f 0%, #bed075 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-family: "Nothing You Could Do", Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: -0.6;
+    margin: 0 auto 2.5rem;
+  }
+
+  @media only screen and (min-width: 600px) {
+    padding: 6rem 6rem 4rem;
+    margin-bottom: 8rem;
 
     h1 {
-      animation: fadeInUp;
-      animation-duration: 1.35s;
-      animation-delay: 0.25s;
-      font-family: "Nothing You Could Do", Helvetica, sans-serif;
-      // font-family: "Meow Script", Helvetica, sans-serif;
       font-size: 4rem;
       font-weight: 400;
-      letter-spacing: -0.6;
+    }
+  }
+
+  @media only screen and (min-width: 840px) {
+    h1 {
+      text-align: center;
+      font-size: 6rem;
       margin-bottom: 5rem;
-      background: -webkit-linear-gradient(
-        0deg,
-        #e6cf3b 0%,
-        rgba(215, 98, 215, 1) 46%,
-        #48e0bf 100%
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .link-row {
-      animation: fadeIn;
-      animation-duration: 3s;
-      width: 50%;
-      margin: 0 auto;
-      a {
-        color: #e9bcb7;
-        font-variant: small-caps;
-        letter-spacing: 8px;
-        font-size: 1.5rem;
-
-        span {
-          letter-spacing: normal;
-        }
-      }
-    }
-
-    @media screen and (min-width: 600px) {
-      h1 {
-        font-size: 6rem;
-      }
     }
   }
 }

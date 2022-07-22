@@ -1,9 +1,9 @@
 <template>
   <main id="main">
-    <div class="flexRow">
-      <h2>Hi There!</h2>
+    <h2>Hi There!</h2>
+    <!-- <div class="flexRow">
       <img src="../../public/me2.gif" />
-    </div>
+    </div> -->
     <p>
       I'm Valerie <a href="#name">Kraucunas</a>, a Senior UX Engineer
       specifically interested in a position on a design system team and other
@@ -26,7 +26,7 @@
       intuitive with time and use.
     </p>
 
-    <p><strong>Design Token? </strong></p>
+    <p><strong>Design Token?</strong></p>
     <p>
       “Codification of design decisions for a consumable, versioned 'source of
       truth'.“
@@ -174,70 +174,32 @@ main {
   flex-direction: column;
   text-align: left;
   width: 90%;
-  margin: 0 auto;
   min-height: 60vh;
   flex-grow: 1;
-  margin-top: 200px;
-  // background-color: rgba(13, 58, 45, 0.4);
-  background-color: rgba(61, 72, 52, 0.4);
-  padding: 4rem;
-  box-sizing: border-box;
+  background-color: rgba(44, 53, 32, 0.6);
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  margin-right: auto;
 
   p {
     line-height: 1.8;
-    padding-right: 10%;
+    padding-right: 18%;
   }
 
   @media screen and (min-width: 600px) {
     width: 80%;
     max-width: 1280px;
+    padding: 4rem;
   }
 
   .flexRow {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     img {
       height: auto;
       max-height: 400px;
     }
-  }
-
-  section {
-    // background-color: $green3;
-    position: relative;
-
-    // article::after,
-    // article::before {
-    //   content: "";
-    //   height: 100%;
-    //   width: 100%;
-    //   position: absolute;
-    //   z-index: -1;
-    //   background: rgba(47, 85, 52, 0.98);
-    //   color: white;
-    //   padding: 6rem;
-    //   filter: blur(12px);
-    //   // box-shadow: 0 0 24px 20px rgba(47, 85, 52, 0.9);
-    //   border-radius: 32% 28% 26% 30% / 19% 17% 21% 40%;
-    // }
-
-    // article::before {
-    //   background: rgba(87, 125, 92, 0.5);
-    //   box-shadow: 0 0 26px 12px rgba(205, 92, 64, 0.3);
-    //   border-radius: 32% 28% 26% 30% / 19% 17% 21% 40% !important;
-
-    //   top: -4px;
-    //   right: 0px;
-    //   // animation: mydowntop linear 46s infinite;
-    // }
-
-    // article::after {
-    //   top: -10px;
-    //   left: -10px;
-    //   border-radius: 100%;
-    //   // animation: mytopleft ease-out 40s infinite;
-    // }
   }
 }
 </style>
