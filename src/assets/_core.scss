@@ -1,38 +1,53 @@
-$green1: #354a3b;
-$green2: #2c4a11;
-$green3: #2e4142;
-$green4: #2c5031;
-$green5: #125007;
-$green6: #3d4834;
-$text-color: #de978a;
+@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&family=Nothing+You+Could+Do&display=swap");
+$text-color: #d5cab6;
+$link-color: #e9bcb7;
 
-// media queries
-$mq-xs: only screen and
-  (
-    max-width: 479px,
-  );
-$mq-sm: only screen and
-  (
-    min-width: 480px,
-  );
-$mq-md: only screen and
-  (
-    min-width: 600px,
-  );
-$mq-lg: only screen and
-  (
-    min-width: 840px,
-  );
-$mq-xl: only screen and
-  (
-    min-width: 960px,
-  );
-$mq-xxl: only screen and
-  (
-    min-width: 1280px,
-  );
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
 
-/// Generate a media query of at least the minimum width from the given breakpoint name.
-/// No query for the smallest breakpoint.
-/// Makes the `@content` apply to the given breakpoint and wider.
-/// @param {String | Number} $name
+body {
+  p {
+    font-size: 16px;
+  }
+
+  a {
+    color: $link-color;
+  }
+}
+
+.link-row {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 0.75rem;
+
+  a {
+    font-variant: small-caps;
+    letter-spacing: 0.25rem;
+    font-size: 1rem;
+
+    span {
+      letter-spacing: normal;
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    gap: 2rem;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-around;
+
+    a {
+      font-size: 1.5rem;
+      letter-spacing: 0.5rem;
+    }
+  }
+}
